@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { menuData } from "../../constants/constants";
-import HelloPage from "../../pages/hello";
+import HelloPage from "../../pages/destination";
 import NavItem from "./subcomponents/navItem";
 
 export interface MenuData {

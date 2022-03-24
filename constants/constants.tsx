@@ -2,22 +2,22 @@ import { MenuData } from "../components/nav/nav";
 
 export const menuData: MenuData[] = [
   {
-    href: "index.html",
+    href: "/",
     menuIndex: "00",
     menuItem: "Home",
   },
   {
-    href: "destination.html",
+    href: "destination",
     menuIndex: "01",
     menuItem: "Destination",
   },
   {
-    href: "crew.html",
+    href: "crew",
     menuIndex: "02",
     menuItem: "Crew",
   },
   {
-    href: "technology.html",
+    href: "technology",
     menuIndex: "03",
     menuItem: "Technology",
   },
