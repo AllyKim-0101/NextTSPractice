@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { menuData } from "../../constants/constants";
+import HelloPage from "../../pages/hello";
 import NavItem from "./subcomponents/navItem";
 
 export interface MenuData {
@@ -8,14 +10,22 @@ export interface MenuData {
 }
 
 const Nav: React.FunctionComponent = () => {
-  // API Call for getting the menu
-
   // Set the state for the value of menuData
+  const [navItems, setNavItems] = useState([]);
+
+  // API Call for getting the menu
+  useEffect(() => {
+    fetch("/api/hello")
+      .then((res) => res.json())
+      .then((result) => {
+        setNavItems(result);
+      });
+  }, []);
 
   return (
     <nav>
       <ul className="primary-navigation underline-indicators flex">
-        {menuData.map((item: MenuData) => (
+        {navItems.map((item: MenuData) => (
           <NavItem
             href={item.href}
             menuIndex={item.menuIndex}
